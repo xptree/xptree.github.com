@@ -10,7 +10,7 @@ pygments: true
 # so be sure to set them if your theme uses them.
 #
 title : Qiu
-#tagline: Site Tagline
+tagline: 技术小屋
 #
 author :
   name : Richard Qiu
