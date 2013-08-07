@@ -9,11 +9,11 @@ pygments: true
 # Themes are encouraged to use these universal variables 
 # so be sure to set them if your theme uses them.
 #
-title : Qiu
+title : Qiu-Blog
 tagline: 技术小屋
 #
 author :
-  name : Richard Qiu
+  name : Jiezhong Qiu
   email : qjz.cst@hotmail.com
   github : xptree
 #  twitter : username

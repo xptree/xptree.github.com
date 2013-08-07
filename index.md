@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Hello World!
-tagline: Supporting tagline
+title: Qiu-Blog
+tagline: 技术小屋
 ---
 {% include JB/setup %}
 
