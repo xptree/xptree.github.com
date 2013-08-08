@@ -12,12 +12,9 @@ tags: [jekyll, github]
 
 感谢[cjld的Blog](cjld.github.com)
 
-*斜体*
 
 **粗体**
-
-
-代码
+*斜体*
 
 	#include <cstdio>
 	#include <cstring>
