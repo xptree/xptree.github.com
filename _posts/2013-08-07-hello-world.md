@@ -12,5 +12,20 @@ tags: [jekyll, github]
 
 感谢[cjld的Blog](cjld.github.com)
 
-**粗体**
 *斜体*
+
+**粗体**
+
+
+代码
+
+	#include <cstdio>
+	#include <cstring>
+	#include <iostream>
+	using namespace std;
+	
+	int main()
+	{
+		cout << "Hello World!";
+		return 0;
+	}
