@@ -85,7 +85,7 @@ JB :
   comments :
     provider : disqus
     disqus :
-      short_name : QiuBlog
+      short_name : Qiu
     livefyre :
       site_id : 123
     intensedebate :
