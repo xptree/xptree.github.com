@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Qiu-Blog
-tagline: 技术小屋
+tagline: gl&hf
 ---
 {% include JB/setup %}
 
