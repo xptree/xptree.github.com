@@ -1,3 +1,6 @@
 pre > code {
 	background:rgba(0, 0, 0, 0);
 }
+pre > p > code {
+	background:rgba(0, 0, 0, 0);
+}
