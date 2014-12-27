@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>xxx</title>
+    <meta charset="utf-8">
+        <meta content="width=device-width" name="viewport">
+        <link href="http://cdn.bootcss.com/twitter-bootstrap/2.2.2/css/bootstrap.min.css" rel="stylesheet">
+        <link href="./css/flat-ui.css" rel="stylesheet">
+        <link href="./css/custom.css" rel="stylesheet">
+        <link href="./css/skins/all.css" rel="stylesheet">
+        <script src="./js/jquery.js"></script>
+        <script src="./js/icheck.js"></script>
+        <script src="./js/custom.min.js"></script>
+        <style>
+            .btn {margin-left: 25%;}
+        </style>
+</head>
+<body>
+    <div class="features">
+        <h2>Our Project</h2>
+        <ul>
+            <li>
+                <strong>introduction</strong> &mdash; balabala
+            </li>
+        </ul>
+    </div>
+    <div class="demo-holder">
+        <h2>Step One 混凝土强度类型</h2>
+        <div class="demo">
+            <div class="demo-list clear">
+                <ul>
+                    <li>
+                        <input tabindex="1" type="radio" id="input-1" name="step1">
+                        <label for="input-1">C15</label>
+                    </li>
+                    <li>
+                        <input tabindex="2" type="radio" id="input-2" name="step1">
+                        <label for="input-2">C20</label>
+                    </li>
+                    <li>
+                        <input tabindex="3" type="radio" id="input-3" name="step1">
+                        <label for="input-3">C30</label>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <input tabindex="4" type="radio" id="input-4" name="step1">
+                        <label for="input-4">C40</label>
+                    </li>
+                    <li>
+                        <input tabindex="5" type="radio" id="input-5" name="step1">
+                        <label for="input-5">C50</label>
+                    </li>
+                    <li>
+                        <input tabindex="6" type="radio" id="input-6" name="step1">
+                        <label for="input-2">C60</label>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <input tabindex="7" type="radio" id="input-7" name="step1">
+                        <label for="input-7">C80</label>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </div>
+    <div class="demo-holder">
+        <h2>Step Two 混凝土浇筑工作度</h2>
+        <div class="demo">
+            <div class="demo-list clear">
+                <ul>
+                    <li>
+                        <input tabindex="1" type="radio" id="input-method-1" name="step2">
+                        <label for="input-method-1">自密实</label>
+                    </li>
+                    <li>
+                        <input tabindex="1" type="radio" id="input-method-2" name="step2">
+                        <label for="input-method-2">普通</label>
+                    </li>
+                    <li>
+                        <input tabindex="3" type="radio" id="input-method-3" name="step2">
+                        <label for="input-method-3">干硬</label>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="features" id = "result" style="display:none">
+        <h2>Result</h2>
+        <ul>
+            <li>
+                <strong>introduction</strong> &mdash; balabala
+            </li>
+        </ul>
+    </div>
+    <div class="span3">
+        <button class="btn btn-large btn-block" onclick=submit_info()>submit</button>
+    </div>
+
+    <script>
+        $(document).ready(function(){
+            //var callbacks_list = $('.demo-callbacks ul');
+            $('.demo-list input').on('ifCreated ifClicked ifChanged ifChecked ifUnchecked ifDisabled ifEnabled ifDestroyed', function(event){
+              //callbacks_list.prepend('<li><span>#' + this.id + '</span> is ' + event.type.replace('if', '').toLowerCase() + '</li>');
+                var result = document.getElementById('result');
+                result.style.display = "none"
+            }).iCheck({
+              checkboxClass: 'icheckbox_square-blue',
+              radioClass: 'iradio_square-blue',
+              increaseArea: '20%'
+            });
+          });
+        function submit_info() {
+            var one = $('input[name="step1"]:checked');
+            if (!one.length) { return false; }
+            var two = $('input[name="step2"]:checked');
+            if (!two.length) { return false; }
+            one = one[0].id;
+            two = two[0].id;
+            var result = document.getElementById('result');
+            result.style.display = "initial";
+        }
+    </script>
+</body>
+</html>
