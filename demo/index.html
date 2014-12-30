@@ -5,7 +5,7 @@
     <title>Our Project</title>
     <meta charset="utf-8">
         <meta content="width=device-width" name="viewport">
-        <link href="http://cdn.bootcss.com/twitter-bootstrap/2.2.2/css/bootstrap.min.css" rel="stylesheet">
+        <link href="./css/bootstrap.min.css" rel="stylesheet">
         <link href="./css/flat-ui.css" rel="stylesheet">
         <link href="./css/custom.css" rel="stylesheet">
         <link href="./css/skins/flat/all.css" rel="stylesheet">
@@ -25,7 +25,7 @@
         <h2>Our Project</h2>
         <ul>
             <li>
-                <strong>introduction</strong> &mdash; balabala
+                <strong>introduction</strong> &mdash; 
             </li>
         </ul>
     </div>
@@ -96,10 +96,23 @@
         <h2>Result</h2>
         <ul>
             <li>
-                <strong>水泥</strong> &mdash; balabala
+                <strong>水</strong> &mdash; <div id="r0" style="display:inline">  </div>
             </li>
             <li>
-                <strong>砂石</strong> &mdash; balabala
+                <strong>水泥</strong> &mdash; <div id="r1" style="display:inline">  </div>
+
+            </li>
+            <li>
+                <strong>砂</strong> &mdash; <div id="r2" style="display:inline">  </div>
+            </li>
+            <li>
+                <strong>石</strong> &mdash;  <div id="r3" style="display:inline">  </div>
+            </li>
+            <li>
+                <strong>减水剂</strong> &mdash;  <div id="r4" style="display:inline">  </div>
+            </li>
+            <li>
+                <strong>水灰比</strong> &mdash; <div id="r5" style="display:inline">  </div>
             </li>
         </ul>
     </div>
@@ -122,6 +135,44 @@
               increaseArea: '20%'
             });
           });
+        function parse(A, B) {
+            var content = new Array(3);
+            content[0] = [[235, 294, 842, 1029, 0],
+                [235, 318, 794, 1053, 0],
+                [235, 367, 719, 1079, 1],
+                [235, 470, 593, 1102, 2],
+                [225, 549, 520, 1106, 3],
+                [215, 614, 471, 1100, 4],
+                [200, 741, 438, 1021, 6]];
+            content[1] = [[195, 244, 883, 1079, 0],
+                [195, 264, 835, 1107, 0],
+                [195, 305, 760, 1140, 0],
+                [195, 390, 635, 1180, 0],
+                [190, 463, 559, 1188, 1],
+                [185, 529, 506, 1181, 2],
+                [175, 648, 473, 1104, 3]];
+            content[2] = [[155, 200, 818, 1227, 0]
+                [160, 216, 769, 1255, 0],
+                [165, 258, 692, 1285, 0],
+                [160, 320, 634, 1286, 0],
+                [155, 378, 579, 1288, 0],
+                [150, 429, 546, 1275, 1],
+                [145, 537, 515, 1203, 1]];
+            var ratio = [0.8,
+                0.74,
+                0.64,
+                0.5,
+                0.41,
+                0.35,
+                0.27];
+            var A = parseInt(A) - 1;
+            var B = parseInt(B) - 1;
+            for (var i=0; i<5; ++i) {
+                document.getElementById('r' + String(i)).innerHTML = String(content[B][A][i]);
+            }
+            document.getElementById('r5').innerHTML = String(ratio[A]);
+            return true;
+        }
         function submit_info() {
             var one = $('input[name="step1"]:checked');
             if (!one.length) { return false; }
@@ -129,10 +180,12 @@
             if (!two.length) { return false; }
             one = one[0].id;
             two = two[0].id;
+            if (!parse(one[one.length - 1], two[two.length - 1])) { return false; }
             var result = document.getElementById('result');
             result.style.display = "initial";
             var btn = document.getElementById('button');
             btn.disabled = true;
+            
         }
     </script>
 </div>
