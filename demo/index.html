@@ -118,7 +118,7 @@
     </div>
     <div class="span3">
         <button class="btn btn-large btn-block" id="button" onclick=submit_info()>submit</button>
-        <button class="btn btn-large btn-block" id="button2">How we calculate it?</button>
+        <button class="btn btn-large btn-block" id="button2" onclick=change_page()>How we calculate it?</button>
     </div>
 
     <script>
@@ -186,7 +186,10 @@
             result.style.display = "initial";
             var btn = document.getElementById('button');
             btn.disabled = true;
-            
+        }
+        function change_page() {
+            console.log("miao");
+            window.location = "carousel.html";
         }
     </script>
 </div>
