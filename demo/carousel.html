@@ -154,12 +154,16 @@
 
     /* Give some space on the sides of the floated elements so text doesn't run right into it. */
     .featurette-image.pull-left {
-      margin-right: 40px;
+      margin-right: 20px;
     }
     .featurette-image.pull-right {
-      margin-left: 40px;
+      margin-left: 20px;
     }
-
+    img.figure {
+        display: block;
+        margin-left: auto;
+        margin-right: auto; 
+    }
     /* Thin out the marketing headings */
     .featurette-heading {
       font-size: 50px;
@@ -168,7 +172,9 @@
       letter-spacing: -1px;
     }
 
-
+    .muted {
+        display:block;
+    }
 
     /* RESPONSIVE CSS
     -------------------------------------------------- */
@@ -267,53 +273,6 @@
   </head>
 
   <body>
-
-
-
-    <!-- NAVBAR
-    ================================================== -->
-    <div class="navbar-wrapper">
-      <!-- Wrap the .navbar in .container to center it within the absolutely positioned parent. -->
-      <div class="container">
-
-        <div class="navbar navbar-inverse">
-          <div class="navbar-inner">
-            <!-- Responsive Navbar Part 1: Button for triggering responsive navbar (not covered in tutorial). Include responsive CSS to utilize. -->
-            <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-            <a class="brand" href="#">Project name</a>
-            <!-- Responsive Navbar Part 2: Place all navbar contents you want collapsed withing .navbar-collapse.collapse. -->
-            <div class="nav-collapse collapse">
-              <ul class="nav">
-                <li class="active"><a href="#">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <!-- Read about Bootstrap dropdowns at http://twbs.github.com/bootstrap/javascript.html#dropdowns -->
-                <li class="dropdown">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
-                  <ul class="dropdown-menu">
-                    <li><a href="#">Action</a></li>
-                    <li><a href="#">Another action</a></li>
-                    <li><a href="#">Something else here</a></li>
-                    <li class="divider"></li>
-                    <li class="nav-header">Nav header</li>
-                    <li><a href="#">Separated link</a></li>
-                    <li><a href="#">One more separated link</a></li>
-                  </ul>
-                </li>
-              </ul>
-            </div><!--/.nav-collapse -->
-          </div><!-- /.navbar-inner -->
-        </div><!-- /.navbar -->
-
-      </div> <!-- /.container -->
-    </div><!-- /.navbar-wrapper -->
-
-
-
     <!-- Carousel
     ================================================== -->
     <div id="myCarousel" class="carousel slide">
@@ -322,9 +281,12 @@
           <img src="assets/img/examples/slide-01.jpg" alt="">
           <div class="container">
             <div class="carousel-caption">
-              <h1>Example headline.</h1>
-              <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-              <a class="btn btn-large btn-primary" href="#">Sign up today</a>
+              <h1>那些搞不清的强度换算</h1>
+              <p class="lead">
+              混凝土结构课程大作业
+              </p>
+              <p class="lead">一目了然，帮你理清错综复杂的混凝土强度关系。
+              </p>
             </div>
           </div>
         </div>
@@ -332,23 +294,20 @@
           <img src="assets/img/examples/slide-02.jpg" alt="">
           <div class="container">
             <div class="carousel-caption">
-              <h1>Another example headline.</h1>
-              <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-              <a class="btn btn-large btn-primary" href="#">Learn more</a>
+              <h1>混凝土结构课程微信平台</h1>
+              <p class="lead">
+              公众号：清小混
+              </p>
+              <p class="lead">
+              微信号：THU_Concrete
+              </p>
+              <p class="lead">
+              欢迎关注！给我们投票吧
+              </p>
             </div>
           </div>
         </div>
-        <div class="item">
-          <img src="assets/img/examples/slide-03.jpg" alt="">
-          <div class="container">
-            <div class="carousel-caption">
-              <h1>One more for good measure.</h1>
-              <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-              <a class="btn btn-large btn-primary" href="#">Browse gallery</a>
-            </div>
-          </div>
-        </div>
-      </div>
+     </div>
       <a class="left carousel-control" href="#myCarousel" data-slide="prev">&lsaquo;</a>
       <a class="right carousel-control" href="#myCarousel" data-slide="next">&rsaquo;</a>
     </div><!-- /.carousel -->
@@ -362,64 +321,142 @@
     <div class="container marketing">
 
       <!-- Three columns of text below the carousel -->
-      <div class="row">
-        <div class="span4">
-          <img class="img-circle" data-src="holder.js/140x140">
-          <h2>Heading</h2>
-          <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</p>
-          <p><a class="btn" href="#">View details &raquo;</a></p>
-        </div><!-- /.span4 -->
-        <div class="span4">
-          <img class="img-circle" data-src="holder.js/140x140">
-          <h2>Heading</h2>
-          <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-          <p><a class="btn" href="#">View details &raquo;</a></p>
-        </div><!-- /.span4 -->
-        <div class="span4">
-          <img class="img-circle" data-src="holder.js/140x140">
-          <h2>Heading</h2>
-          <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-          <p><a class="btn" href="#">View details &raquo;</a></p>
-        </div><!-- /.span4 -->
-      </div><!-- /.row -->
 
 
       <!-- START THE FEATURETTES -->
 
-      <hr class="featurette-divider">
-
       <div class="featurette">
-        <img class="featurette-image pull-right" src="assets/img/examples/browser-icon-chrome.png">
-        <h2 class="featurette-heading">First featurette headling. <span class="muted">It'll blow your mind.</span></h2>
-        <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+        <img class="figure" data-src="holder.js/512x512" src="assets/img/examples/150.png">
+        <h2 class="featurette-heading">
+            您觉得方块吼不吼啊? <span class="muted">吼啊!</span></h2>
+        <p class="lead">
+        国内标准试样即边长为$150mm$的正方体。我们通常所说的混凝土标号，如$C30$、$C60$等，都是这种试块强度的标准值。
+        $$f_{cu,k}$$
+        记住几个关键字：$28$天，$95\%$保证率，养护条件：$20\pm 2^{\circ}C$，$95\%$湿度
+        </p>
       </div>
 
       <hr class="featurette-divider">
 
       <div class="featurette">
-        <img class="featurette-image pull-left" src="assets/img/examples/browser-icon-firefox.png">
-        <h2 class="featurette-heading">Oh yeah, it's that good. <span class="muted">See for yourself.</span></h2>
-        <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+        <img class="figure" data-src="holder.js/512x512" src="assets/img/examples/100.png">
+        <h2 class="featurette-heading">小一号也资瓷吗?
+            <span class="muted">当然啦!</span></h2>
+        <p class="lead">
+        边长为$100mm$的试块十分常用，它的强度较大，与$150mm$的强度换算为： 
+        $$f^{150}_{cu}=\mu f^{100}_{cu}$$
+        小于 $C50$时， $\mu$取$0.95$。
+        $C100$取$0.9$。
+        $C50\sim C100$之间的 $\mu$采用线性插值。
+        </p> 
       </div>
 
       <hr class="featurette-divider">
 
       <div class="featurette">
-        <img class="featurette-image pull-right" src="assets/img/examples/browser-icon-safari.png">
-        <h2 class="featurette-heading">And lastly, this one. <span class="muted">Checkmate.</span></h2>
-        <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+        <img class="figure" data-src="holder.js/512x512" src="assets/img/examples/3.png">
+        <h2 class="featurette-heading">这个钦定啦!
+            <span class="muted">弄个大新闻</span></h2>
+        </h2>
+        <p class="lead">
+        这是真正的反映轴心抗压强度$f_c$的试样。其中常取$h=450mm$，$b=150mm$，或$h=300mm$，$b=100mm$。$f_c$与$f_{cu}$的换算为：
+         $$f_c=k_1\times f_{cu}$$
+         $C50$以下时，$k_1$取$0.76$，$C80$以上取$0.82$，其间进行线性插值。
+        </p>
       </div>
 
       <hr class="featurette-divider">
+      <div class="featurette">
+        <img class="figure" data-src="holder.js/512x512" src="assets/img/examples/4.png">
+        <h2 class="featurette-heading">我是见得多啦。
+            <span class="muted">西方哪个国家我没去过?</span></h2>
+        <p class="lead">
+        一些西方国家采用的是难以制作的圆柱形构件，它的强度与中国标准方块的换算为：
+        $$f_c^{\prime}=(0.79 \sim 0.81)~f_{cu}$$
+        </p>
+      </div>
+      
+      <hr class="featurette-divider">
+      <div class="featurette">
+        <img class="figure" data-src="holder.js/512x512" src="assets/img/examples/5.png">
+        <h2 class="featurette-heading">我们比赛拔河呀~ </h2>
+        <p class="lead">
+         混凝土的抗拉强度远远小于抗压强度，轴心抗拉强度的
+         $f_t$与标准试样强度换算为：
+         $$f_t=0.395~{f_{cu}}^{0.55}$$
+        </p>
+      </div>
 
+      <hr class="featurette-divider">
+      <div class="featurette">
+        <img class="figure" data-src="holder.js/512x512" src="assets/img/examples/6.png">
+        <h2 class="featurette-heading">
+            替你们捉急呀。
+            <span class="muted">提高自己的知识水平</span></h2>
+        <p class="lead">
+        轴心抗拉试验比较困难，聪明的人类利用劈裂抗拉试验来反映抗拉强度。劈裂抗拉强度$f_{sp}$与标准试样强度换算为：
+        $$f_{sp}=0.19~{f_{cu}}^{0.75}$$
+        </p>
+      </div>
+      
+      
+      <hr class="featurette-divider">
+      <div class="featurette">
+        <img class="figure" data-src="holder.js/512x512" src="assets/img/examples/7.png">
+        <h2 class="featurette-heading">问来问去的问题呀!
+            <span class="muted">too simple</span></h2>
+        <p class="lead">
+        你们跟我讲强度傻傻分不清楚，我完全可以告诉你们“无可奉告”，你们也不高兴，那怎么办？你们呐，我觉得你们工程师还是要学习一个。不查表，算什么工程师？
+        《混凝土结构》25页，查表！
+        </p>
+      </div>
+      
+      <hr class="featurette-divider">
+      <div class="featurette">
+        <img class="figure" data-src="holder.js/512x512" src="assets/img/examples/8.png">
+        <h2 class="featurette-heading">遇见复杂的受力
+            <span class="muted">你们本身也要判断</span></h2>
+        <p class="lead">
+            现实中的混凝土受力往往比较复杂。
+            对于双轴受压，我们针对不同的受力组合组成包络线来反映强度。最大受压强度发生在压应力之比$0.3\sim 0.6$之间，约为$1.25\sim 1.6~f_c$，而抗拉强度与单轴接近。
+        </p>
+      </div>
+      
+      <hr class="featurette-divider">
+      <div class="featurette">
+        <img class="figure" data-src="holder.js/512x512" src="assets/img/examples/9.png">
+        <h2 class="featurette-heading">三轴应力状态
+            <span class="muted">我跟他谈笑风生</span></h2>
+        <p class="lead">
+            一般三轴应力状态太过复杂，工程师通过拍脑袋的方式决定不予研究，而是以常规三轴受压代之。即令$\sigma_1>\sigma_2=\sigma_3$ 。
+            如此，可以直接将强度简化为$$f_{c1}^{\prime}=f_c^{\prime}+4\sigma$$
+            抗拉强度记为原来的$0.9$倍。
+        </p>
+      </div>
+      
       <!-- /END THE FEATURETTES -->
-
-
-      <!-- FOOTER -->
-      <footer>
-        <p class="pull-right"><a href="#">Back to top</a></p>
-        <p>&copy; 2013 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
-      </footer>
+      <hr class="featurette-divider">
+      <div class="row">
+        <div class="span4">
+          <img class="img-circle" data-src="holder.js/140x140" src="assets/img/examples/dog.jpg">
+          <h2>周鼎</h2>
+        </div><!-- /.span4 -->
+        <div class="span4">
+          <img class="img-circle" data-src="holder.js/140x140" src="assets/img/examples/dog.jpg">
+          <h2>曹丰泽</h2>
+        </div><!-- /.span4 -->
+        <div class="span4">
+          <img class="img-circle" data-src="holder.js/140x140" src="assets/img/examples/dog.jpg">
+          <h2>蔡诗瑶</h2>
+        </div><!-- /.span4 -->
+      </div><!-- /.row -->
+      
+      <hr class="featurette-divider">
+      <div class="featurette">
+          <img class="figure" data-src="holder.js/512x512" src="assets/img/examples/er.jpg" width="512px" height="512px"> 
+        <h2 class="featurette-heading">我们的二维码
+            <span class="muted">欢迎关注清小混</span></h2>
+      </div>
 
     </div><!-- /.container -->
 
@@ -428,6 +465,14 @@
     <!-- Le javascript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+              tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+              });
+    </script>
+    <script type="text/javascript"
+          src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
     <script src="assets/js/jquery.js"></script>
     <script src="assets/js/bootstrap-transition.js"></script>
     <script src="assets/js/bootstrap-alert.js"></script>
